@@ -1,0 +1,119 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1f24;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.denis-name{
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  color: #e8c547;
+}
+
+.header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+  margin-right: 14px;
+}
+
+.score {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  user-select: none;
+}
+
+.circle {
+  position: relative;
+}
+
+.circle img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid rgba(66, 66, 213, 0.73);
+  box-shadow: 0px 0px 16px 0px rgba(138, 143, 254, 0.05);
+  transition: transform 0.2s ease;
+  --tiltX: 0deg;
+  --tiltY: 0deg;
+  transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
+}
+
+.plus-one {
+  position: absolute;
+  font-family: Inter;
+  text-shadow: 0px 0px 4px rgba(234, 182, 64, 0.25);
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(180deg, #e8c547 0%, #ef882b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  user-select: none;
+  animation: move-up 2s forwards;
+}
+
+.minus-one {
+  position: absolute;
+  font-family: Inter;
+  text-shadow: 0px 0px 4px rgba(234, 182, 64, 0.25);
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(180deg, #ff0000 0%, #ef882b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  user-select: none;
+  animation: move-up 2s forwards;
+}
+
+@keyframes move-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}

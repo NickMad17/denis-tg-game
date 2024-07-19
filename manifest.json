@@ -1,0 +1,9 @@
+{
+  "name": "Vite + Vue App",
+  "short_name": "ViteVue",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#42b883",
+  "description": "An app built with Vite and Vue"
+}
